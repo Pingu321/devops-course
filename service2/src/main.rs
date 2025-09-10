@@ -6,7 +6,7 @@ use time::{OffsetDateTime, macros::format_description};
 
 #[get("/status")]
 async fn status() -> impl Responder {
-    let storage = env::var("STORAGE_URL").unwrap_or_else(|_| "http://storage:7070".to_string());
+    let storage = env::var("STORAGE_URL").unwrap_or_else(|_| "http://storage:8200".to_string());
     let vpath = env::var("VSTORAGE_PATH").unwrap_or_else(|_| "/data/vstorage/log.txt".to_string());
 
     let record = format!(
