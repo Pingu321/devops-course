@@ -8,14 +8,14 @@ services:
       SERVICE2_URL: "http://service2:8198"
       VSTORAGE_PATH: "/var/vstorage/log.txt"
     volumes:
-      - ./vStorage:/var/vstorage/log.txt
+      - ./vstorage:/var/vstorage/log.txt
   service2:
     build: ./service2
     environment:
       STORAGE_URL: "http://storage:8200"
       VSTORAGE_PATH: "/var/vstorage/log.txt"
     volumes:
-      - ./vStorage:/var/vstorage/log.txt
+      - ./vstorage:/var/vstorage/log.txt
   storage:
     build: ./storage
     environment:
