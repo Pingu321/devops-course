@@ -41,7 +41,7 @@ async fn status() -> impl Responder {
 #[actix_web::main]
 async fn main() -> std::io::Result<()> {
     HttpServer::new(|| App::new().service(status))
-        .bind(("0.0.0.0", 8080))?
+        .bind(("0.0.0.0", 8198))?
         .run()
         .await
 }
