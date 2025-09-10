@@ -1,0 +1,25 @@
+services:
+  service1:
+    build: ./service1
+    ports:
+      - "8199:8199"
+    environment:
+      STORAGE_URL: "http://storage:8200"
+      VSTORAGE_PATH: "/var/vstorage/log.txt"
+      SERVICE2_URL: "http://service2:8198"
+    volumes:
+      - vStorage:/var/vstorage
+  service2:
+    build: ./service2
+    environment:
+      STORAGE_URL: "http://storage:8200"
+      VSTORAGE_PATH: "/var/vstorage/log.txt"
+    volumes:
+      - vStorage:/var/vstorage
+  storage:
+    build: ./storage
+    environment:
+      LOG_FILE: "/data/storage/log.txt"
+
+volumes:
+  vStorage:
