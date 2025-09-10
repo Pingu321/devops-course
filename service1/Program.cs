@@ -6,10 +6,9 @@ builder.Services.AddHttpClient();
 
 var app = builder.Build();
 
-// TODO: replace with correct
-string storageUrl = Environment.GetEnvironmentVariable("STORAGE_URL") ?? "http://storage:8200";
-string vStoragePath = Environment.GetEnvironmentVariable("VSTORAGE_PATH") ?? "/data/vstorage/log.txt";
-string service2Url = Environment.GetEnvironmentVariable("SERVICE2_URL") ?? "http://127.0.0.1:8198";
+string storageUrl = Environment.GetEnvironmentVariable("STORAGE_URL");
+string service2Url = Environment.GetEnvironmentVariable("SERVICE2_URL");
+string vStoragePath = Environment.GetEnvironmentVariable("VSTORAGE_PATH");
 
 app.MapGet("/status", async (IHttpClientFactory factory, CancellationToken ct) =>
 {

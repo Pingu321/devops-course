@@ -1,7 +1,7 @@
 from flask import Flask, request
 import os, pathlib
 
-log_path = os.environ.get("LOG_FILE", "vstorage/logs.txt")
+log_path = os.environ.get("LOG_FILE")
 
 pathlib.Path(os.path.dirname(log_path)).mkdir(exist_ok=True, parents=True)
 
