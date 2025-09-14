@@ -2,10 +2,11 @@
 name = "service2"
 version = "0.1.0"
 edition = "2024"
+resolver = "2" 
 
 [dependencies]
-actix-web = "4.11.0"
-awc = "3.8.0"
+actix-web = { version = "4.11.0", default-features = false, features = ["macros"] }
+awc = { version = "3.8.0", default-features = false, features = ["rustls"] }
+sysinfo = { version = "0.37.0", default-features = false, features = ["system"] }
 fs2 = "0.4.3"
-sysinfo = "0.37.0"
-time = "0.3.43"
+time = { version = "0.3.43", default-features = false, features = ["macros", "formatting"] }
