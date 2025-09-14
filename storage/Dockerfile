@@ -6,4 +6,6 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY storage.py .
 
+EXPOSE 8200
+
 CMD ["python", "storage.py"]
