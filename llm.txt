@@ -1,0 +1,7 @@
+LLM tool that was used: Claude 4.0 Sonnet
+
+Motivation to use llm: Getting ideas on how to solve/debug issues
+
+How and why LLM helped: The LLM helped to gave me ideas on how to debug and tackle some issues. For example gave help when having some incompatible versions on packages and images and gave some useful commands to debug some network problems.
+
+What kind of mistakes LLM did: Did not have the most recent knowledge always so sometimes might have recommend some outdated packages etc.
