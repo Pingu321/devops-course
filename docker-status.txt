@@ -1,0 +1,12 @@
+docker container ls:
+CONTAINER ID   IMAGE                    COMMAND                 CREATED          STATUS          PORTS                                         NAMES
+9cdbab067c9b   devops-course-storage    "python storage.py"     43 seconds ago   Up 12 seconds   8200/tcp                                      devops-course-storage-1
+212c1d87a3bf   devops-course-service2   "/service2"             43 seconds ago   Up 12 seconds   8198/tcp                                      devops-course-service2-1
+900c822812b1   devops-course-service1   "dotnet Service1.dll"   10 minutes ago   Up 12 seconds   0.0.0.0:8199->8199/tcp, [::]:8199->8199/tcp   devops-course-service1-1
+
+docker network ls:
+NETWORK ID     NAME                    DRIVER    SCOPE
+05b0927d4ae8   bridge                  bridge    local
+61a8153a2bd1   devops-course_default   bridge    local
+6f662bf05b20   host                    host      local
+651c1c5cb4a0   none                    null      local
