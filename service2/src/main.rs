@@ -16,10 +16,6 @@ async fn status() -> impl Responder {
         get_root_space()
     );
 
-    if let Some(dir) = Path::new(&vpath).parent() {
-        let _ = fs::create_dir_all(dir);
-    }
-
     if let Ok(mut f) = OpenOptions::new().create(true).append(true).open(&vpath) {
         let _ = writeln!(f, "{}", record);
     }
